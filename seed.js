@@ -1,4 +1,6 @@
-[
+var db = require('./models');
+
+var talksList = [
   {
     "title": "CILLUM NON",
     "abstract": "Aliqua consequat mollit Lorem dolor nulla qui sunt tempor veniam eiusmod ullamco quis commodo.",
@@ -43,3 +45,12 @@
     "attendees": []
   }
 ]
+
+db.Talk.remove({}, function(err,talks) {
+
+    db.Talk.create(talksList, function (err, talks) {
+      if (err) { return console.log('error', err); }
+      console.log('created', talks.length, 'talks');
+      process.exit();
+    });
+});
