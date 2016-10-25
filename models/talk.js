@@ -9,7 +9,11 @@ var TalkSchema = new Schema({
     name: String,
     company: String,
     email: String,
-    bio: String
+    bio: String,
+    attendees: [{
+      type: Schema.Types.ObjectId,
+      ref: 'Attendee'
+    }]
   }
 });
 
