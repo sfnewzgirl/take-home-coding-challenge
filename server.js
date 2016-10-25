@@ -23,12 +23,14 @@ app.use(express.static('public'));
 // @TODO api index route
 
 //lists all talks
-
-
+app.get('/api/talks', function (req, res) {
+  db.Talk.find(function (error, talks) {
+    if (error) {return console.log("An error occurred: " + error);}
+    res.json(talks);
+  })
+})
 
 //lists all attendees
-
-
 
 //json endpoints
 app.get('/api', function api_index(req, res) {
