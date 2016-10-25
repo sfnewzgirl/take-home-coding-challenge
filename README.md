@@ -20,7 +20,7 @@ ReferenceError: Speaker is not defined
     at Object.<anonymous> (/Users/mishaleclair/wdi_31/take-home-coding-challenge/models/talk.js:8:13)
     ```
 
-I took a step back to research associations am researching associations in MongoDB to reassess my strategy and see if I can resolve the issue by implementing a new strategy or if the best course of action is more debugging with my current strategy.
+I took a step back to research associations in MongoDB. I reassessed my strategy and decided to simplify my models and relationships. I started by embedding the speaker into the talk model. I am doing additional research on this strategy. I will also take a second look at the referenced relationship between attendees and talks.
 
 ## With more time I would:
 
