@@ -19,6 +19,10 @@ var db = require('./models');
 //static route
 app.use(express.static('public'));
 
+app.get('/', function homepage(req, res) {
+  res.sendFile(__dirname + '/api');
+});
+
 //ROUTES
 // @TODO api index route
 

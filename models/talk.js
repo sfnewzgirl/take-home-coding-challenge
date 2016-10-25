@@ -5,8 +5,12 @@ var TalkSchema = new Schema({
   title: String,
   abstract: String,
   room: Number,
-  speaker: [Speaker.Schema],
-  attendees: [Attendee.Schema]
+  speaker: {
+    name: String,
+    company: String,
+    email: String,
+    bio: String
+  }
 });
 
 var Talk = mongoose.model('Talk', TalkSchema);
